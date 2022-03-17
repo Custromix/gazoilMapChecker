@@ -1,10 +1,10 @@
 <?php
 
-file_put_contents('test.zip', fopen("https://donnees.roulez-eco.fr/opendata/instantane", "r"));
+file_put_contents('./xmlGazoil/test.zip', fopen("https://www.data.gouv.fr/fr/datasets/r/087dfcbc-8119-4814-8412-d0a387fac561", "r"));
 
 $zip = new ZipArchive;
-if ($zip->open('test.zip') === TRUE) {
-    $zip->extractTo('./xml/');
+if ($zip->open('./xmlGazoil/test.zip') === TRUE) {
+    $zip->extractTo('./xmlGazoil/');
     $zip->close();
     echo 'ok';
 } else {

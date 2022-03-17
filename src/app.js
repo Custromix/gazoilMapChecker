@@ -35,15 +35,11 @@ var getHttpRequest = function () {
 
 var httpRequest = getHttpRequest();
 httpRequest.onreadystatechange = function (){
-
     if(httpRequest.readyState === 4){
         console.log(httpRequest.responseText);
         var xmlEssence = httpRequest.responseText;
     }
-    
 }
-
-
 
 httpRequest.open('GET', './src/xml/PrixCarburants_instantane.xml', true);
 httpRequest.send();
